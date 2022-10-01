@@ -18,4 +18,8 @@ app.get("/blog", function(req,res){
 res.sendFile(path.join(__dirname, "/blog.html"));
 });
 
+//Router to using images in .html giles
+app.use(express.static("static"));
+
+
 app.listen(HTTP_PORT, onHttpSStart);
