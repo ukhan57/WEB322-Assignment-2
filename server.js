@@ -33,6 +33,11 @@ app.get("/login", function(req,res){
     res.sendFile(path.join(__dirname, "/login.html"));
 });
 
+// Setting up a router function to listen on './error'
+app.get("/error", function(req,res){
+    res.sendFile(path.join(__dirname, "/error.html"));
+});
+
 //Router to using images in .html giles
 app.use(express.static("static"));
 
