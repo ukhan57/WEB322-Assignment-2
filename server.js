@@ -18,6 +18,11 @@ app.get("/blog", function(req,res){
 res.sendFile(path.join(__dirname, "/blog.html"));
 });
 
+// Setting up a router funcntion to listen on './read_more'
+app.get("/read_more", function(req,res){
+    res.sendFile(path.join(__dirname, "/read_more.html"));
+});
+
 //Router to using images in .html giles
 app.use(express.static("static"));
 
