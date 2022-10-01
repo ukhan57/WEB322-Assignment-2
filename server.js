@@ -23,9 +23,14 @@ app.get("/read_more", function(req,res){
     res.sendFile(path.join(__dirname, "/read_more.html"));
 });
 
-// Setting up a router function to listen on './read_more'
+// Setting up a router function to listen on './registration'
 app.get("/registration", function(req,res){
     res.sendFile(path.join(__dirname, "/registration.html"));
+});
+
+// Setting up a router function to listen on './login'
+app.get("/login", function(req,res){
+    res.sendFile(path.join(__dirname, "/login.html"));
 });
 
 //Router to using images in .html giles
